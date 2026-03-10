@@ -5,8 +5,8 @@
 
 int main() {
     
-    int dias, kilometers;
-    float divi, totalvalor;
+    int dias, kilometers, result;
+    float divi, totalvalor, truncar;
     
     scanf("%d", &dias);
     while(dias < 1 || dias > 30){
@@ -22,7 +22,10 @@ int main() {
     totalvalor = (dias * 30) + (kilometers * 0.01);
     divi = totalvalor - (totalvalor / 10);
     
-    printf("%.2f", divi);
+    result = (int)(divi * 100.00);
+    truncar = (result / 100.00);
+
+    printf("%.2f", truncar);
     
     
     
